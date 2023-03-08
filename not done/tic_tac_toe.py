@@ -1,5 +1,5 @@
 import random
-from school.not_done import rock_paper_scissors
+import rock_paper_scissors
 
 def home_screen():
     print()
@@ -16,3 +16,5 @@ def home_screen():
         print("start")
     else:
         home_screen()
+
+rock_paper_scissors.choose_your_actions(1)

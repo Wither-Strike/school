@@ -36,7 +36,7 @@ def player_number_calculator():
         player_number_calculator()
 
 def choose_your_actions(re_player_number):
-    if re_player_number == '1':
+    if re_player_number == '1' or re_player_number == 1:
         user1_choice = input(f"Enter a choice ({possible_actions}): ").lower()
         user2_choice = random.choice(possible_actions)
         battle(user1_choice, user2_choice)
@@ -49,7 +49,7 @@ def choose_your_actions(re_player_number):
 def quit_or_continue():
     print()
     print()
-    continueyn = input("would you like to continue? (y/n) ").lower
+    continueyn = input("would you like to continue? (y/n) ").lower()
     if continueyn == "y":
         player_number_calculator()
     elif continueyn == "n":
