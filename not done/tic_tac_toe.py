@@ -1,5 +1,5 @@
 import random
-from school_main.not_done import rock_paper_scissors
+from school.not_done import rock_paper_scissors
 
 def home_screen():
     print()
