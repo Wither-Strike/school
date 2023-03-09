@@ -21,7 +21,6 @@ def home_screen():
         home_screen()
 
 # Partially Chris', partially Alvins
-possible_actions = ["rock", "paper", "scissors"]
 
 def player_number_calculator():
     print()
@@ -35,14 +34,16 @@ def player_number_calculator():
         print("You have input something that does not compute")
         player_number_calculator()
 
+possible_actions = ["rock", "paper", "scissors"]
+
 def choose_your_actions(re_player_number):
     if re_player_number == '1' or re_player_number == 1:
-        user1_choice = input(f"Enter a choice ({possible_actions}): ").lower()
+        user1_choice = input(f"Enter a choice: ({possible_actions})").lower()
         user2_choice = random.choice(possible_actions)
         battle(user1_choice, user2_choice)
     else:
-        user1_choice = input(f"Enter a choice ({possible_actions}): ").lower()
-        user2_choice = input(f"Enter a choice ({possible_actions}): ").lower()
+        user1_choice = input(f"Enter a choice: ({possible_actions})").lower()
+        user2_choice = input(f"Enter a choice: ({possible_actions})").lower()
         battle(user1_choice, user2_choice)
 
 
