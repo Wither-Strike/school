@@ -1,5 +1,4 @@
 import random
-from rock_paper_scissors import player_number_calculator, choose_your_actions, quit_or_continue
 
 def home_screen():
     print()
