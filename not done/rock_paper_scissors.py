@@ -50,6 +50,9 @@ def choose_your_actions(re_player_number):
 def quit_or_continue():
     print()
     print()
+    print(f"player 1s score is {p1score} against player 2s {p2score}")
+    print()
+    print()
     continueyn = input("would you like to continue? (y/n) ").lower()
     if continueyn == "y":
         player_number_calculator()
@@ -70,25 +73,36 @@ def battle(user_action1, user_action2):
     print()
     if user_action1 == user_action2:
         print(f"Both players selected {user_action1}. It's a tie... NERD!")
+        p1score += 1
+        p2score += 1
     elif user_action1 == "rock":
         if user_action2  == "scissors":
             print("rock beats scissors, you win.")
+            p1score += 1
         else:
             print("paper covers rock, you lose... LOSER")
+            p2score += 1
     elif user_action1 == "paper":
         if user_action2 == "rock":
             print("paper covers rock! you win.")
+            p1score += 1
         else:
             print("scissors cuts paper, you lose... LOSER NERD")
+            p2score += 1
     elif user_action1 == "scissors":
         if user_action2 == "paper":
             print("scissors cuts paper, you win.")
+            p1score += 1
         else:
             print("rock smashes scissors, you lose... IMBECIL")
+            p2score += 1
     else:
         print("you have to pick between rock, paper and scissors, not something random... NERD")
 
     quit_or_continue()
+
+p1score = 0
+p2score = 0
 
 if __name__ == "__main__":
     home_screen()
