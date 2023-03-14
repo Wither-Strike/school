@@ -47,16 +47,19 @@ def player_number_calculator():
         print("You have input something that does not compute")
         player_number_calculator()
 
-possible_actions = ["rock", "paper", "scissors"]
+possible_actions = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
 
 def choose_your_actions(re_player_number):
     if re_player_number == '1':
         X_choice = input(f"Enter a choice: ({possible_actions})").lower()
         O_choice = random.choice(possible_actions)
+        print(board)
 
     else:
         X_choice = input(f"Enter a choice: ({possible_actions})").lower()
+        print(board)
         O_choice = input(f"Enter a choice: ({possible_actions})").lower()
+        print(board)
 
 
 
