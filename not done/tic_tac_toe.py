@@ -39,6 +39,7 @@ def choose_your_actions(active_player_number):
         if O_choice not in possible_actions:
             print("\n\nthat move is not availible, try again\n\n")
             choose_your_actions(2)
+            choose_your_actions(1)
         player_choice_to_board(O_choice, 2)
     if active_player_number == 3:
         X_choice = input(f"\n\nEnter a choice:({possible_actions})\n").lower()
@@ -75,6 +76,7 @@ def player_choice_to_board(choice, active_player_number):
             a1 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             a1 = "O"
             printboard()
@@ -91,6 +93,7 @@ def player_choice_to_board(choice, active_player_number):
             a2 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             a2 = "O"
             printboard()
@@ -106,6 +109,7 @@ def player_choice_to_board(choice, active_player_number):
             a3 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             a3 = "O"
             printboard()
@@ -121,6 +125,7 @@ def player_choice_to_board(choice, active_player_number):
             b1 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             b1 = "O"
             printboard()
@@ -136,6 +141,7 @@ def player_choice_to_board(choice, active_player_number):
             b2 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             b2 = "O"
             printboard()
@@ -151,6 +157,7 @@ def player_choice_to_board(choice, active_player_number):
             b3 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             b3 = "O"
             printboard()
@@ -166,6 +173,7 @@ def player_choice_to_board(choice, active_player_number):
             c1 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             c1 = "O"
             printboard()
@@ -181,6 +189,7 @@ def player_choice_to_board(choice, active_player_number):
             c2 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             c2 = "O"
             printboard()
@@ -196,6 +205,7 @@ def player_choice_to_board(choice, active_player_number):
             c3 = "X"
             printboard()
             choose_your_actions(2)
+            choose_your_actions(1)
         elif active_player_number == 2:
             c3 = "O"
             printboard()
