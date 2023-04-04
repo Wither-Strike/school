@@ -57,6 +57,7 @@ def quit_or_continue():
     if continueyn == "y":
         player_number_calculator()
     elif continueyn == "n":
+        write_file()
         print()
         print()
         print("goodbye")
@@ -66,6 +67,7 @@ def quit_or_continue():
 # NEW SCRIPT (semi comlete) down below
 # Alvins section
 def battle(user_action1, user_action2):
+    global  p1score, p2score
     print()
     print()
     print(f"\nuser 1 chose {user_action1}, user 2 chose {user_action2}.\n")
@@ -103,6 +105,24 @@ def battle(user_action1, user_action2):
 
 p1score = 0
 p2score = 0
+ratio = None
+playername = input("input name:")
 
-if __name__ == "__main__":
-    home_screen()
+try:
+    open(f"{playername}.txt", "r")
+except:
+    with open(f"{playername}.txt", "x") as file:
+        file.write('0.0')
+
+def write_file():
+    with open(f"{playername}.txt", "r+") as file:
+        ratio = p1score/(p1score+p2score)
+        #print(type(file.read().rstrip()))
+        fromfile = float(file.read().rstrip())
+        #print(type(fromfile))
+        if fromfile < ratio:
+            ratio = ratio.__str__()
+            with open(f"{playername}.txt", "w") as f:
+                f.write(ratio)
+
+home_screen()
