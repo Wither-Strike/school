@@ -259,7 +259,8 @@ playername = input("input name:")
 try:
     open(f"{playername}.txt", "r")
 except:
-    open(f"{playername}.txt", "x")
+    with open(f"{playername}.txt", "x") as file:
+        file.write('0.0')
 
 def write_file():
     with open(f"{playername}.txt", "r+") as file:
