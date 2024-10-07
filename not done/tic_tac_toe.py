@@ -272,5 +272,4 @@ def write_file():
             ratio = ratio.__str__()
             with open(f"{playername}.txt", "w") as f:
                 f.write(ratio)
-
 home_screen()
